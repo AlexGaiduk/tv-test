@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;700&display=swap');
+
+@mixin tablets {
+    @media (min-width: 900px) { @content; }
+}
+
+@mixin text {
+    font-family: 'Golos Text', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+@mixin text-size-1 {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+@mixin text-size-2 {
+    font-size: 18px;
+    line-height: 25px;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #F5F5F5;
+    color: #0D0D0D;
+    @include text;
+}
+
+p, h2 {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    text-transform: none;
+}
+
+br {
+    display: none;
+    @include tablets {
+        display: block;
+    }
+}
+
+img {
+    width: 100%;
+}
+
+button {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    background: none;
+    cursor: pointer;
+    @include text;
+    @include text-size-1;
+    color: #5E656E;
+}
+
+.article {
+    background: #FFFFFF;
+    @include tablets {
+        width: 900px;
+        margin: 0 auto;
+        border-radius: 1rem;
+    }
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem;
+    }
+
+    &__title {
+        display: flex;
+    }
+
+    &__name {
+        @include text-size-1;
+        font-weight: 500;
+    }
+
+    &__author {
+        display: none;
+        @include tablets {
+            display: block;
+            margin-left: 1rem;
+            @include text-size-1;
+            font-weight: 400;
+        }
+    }
+
+    &__date {
+        color: #5E656E;
+        font-weight: 400;
+    }
+
+    &__description {
+        padding: 1rem;
+        p {
+            @include text-size-2;
+            margin-top: 0.5rem;
+        }
+    }
+
+    picture {
+        display: flex;
+    }
+
+    &__footer {
+        display: flex;
+        padding: 1.25rem;
+    }
+
+    &__likes,
+    &__bookmark,
+    &__comment {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        span {
+            margin-left: 0.375rem;
+        }
+    }
+
+    &__bookmark {
+        margin-left: 1.75rem;
+    }
+
+    &__comment {
+        margin-left: 1.875rem;
+    }
+}

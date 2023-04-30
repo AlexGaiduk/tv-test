@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;700&display=swap");
+h2 {
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 32px;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background: #F5F5F5;
+	color: #0D0D0D;
+	font-family: "Golos Text", sans-serif;
+	font-style: normal;
+	font-weight: 400;
+}
+
+p, h2 {
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+	text-transform: none;
+}
+
+br {
+	display: none;
+}
+@media (min-width: 900px) {
+	br {
+		display: block;
+	}
+}
+
+img {
+	width: 100%;
+}
+
+button {
+	margin: 0;
+	padding: 0;
+	outline: none;
+	border: none;
+	background: none;
+	cursor: pointer;
+	font-family: "Golos Text", sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 24px;
+	color: #5E656E;
+}
+
+.article {
+	background: #FFFFFF;
+}
+@media (min-width: 900px) {
+	.article {
+		width: 900px;
+		margin: 0 auto;
+		border-radius: 1rem;
+	}
+}
+.article__header {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	padding: 1rem;
+}
+.article__title {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+.article__name {
+	font-size: 16px;
+	line-height: 24px;
+	font-weight: 500;
+}
+.article__author {
+	display: none;
+}
+@media (min-width: 900px) {
+	.article__author {
+		display: block;
+		margin-left: 1rem;
+		font-size: 16px;
+		line-height: 24px;
+		font-weight: 400;
+	}
+}
+.article__date {
+	color: #5E656E;
+	font-weight: 400;
+}
+.article__description {
+	padding: 1rem;
+}
+.article__description p {
+	font-size: 18px;
+	line-height: 25px;
+	margin-top: 0.5rem;
+}
+.article picture {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+.article__footer {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	padding: 1.25rem;
+}
+.article__likes, .article__bookmark, .article__comment {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+}
+.article__likes span, .article__bookmark span, .article__comment span {
+	margin-left: 0.375rem;
+}
+.article__bookmark {
+	margin-left: 1.75rem;
+}
+.article__comment {
+	margin-left: 1.875rem;
+}
